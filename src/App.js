@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import { Headers } from './Components/Headers';
+import { Inputs } from './Components/Inputs';
+import { HeadersChild } from './Components/Headers/HeadersChild';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex">
+      <div className="w-30">
+        <Headers>Users</Headers>
+        <HeadersChild>Add Users</HeadersChild>
+        <Inputs placeholder="Enter User" name="userName" className="purple-600" >Add</Inputs>
+        <HeadersChild>List of users</HeadersChild>
+      </div>
     </div>
   );
 }
